@@ -47,7 +47,7 @@ namespace GradeBookTests
         {
             // Get StandardGradeBook from the GradeBook.GradeBooks namespace
             var gradebook = TestHelpers.GetUserType("GradeBook.GradeBooks.StandardGradeBook");
-            Assert.True(gradebook != null, "`StandardGradeBook` wasn't found in the `GradeBooks.GradeBook` namespace.");
+            Assert.True(gradebook != null, "`StandardGradeBook` wasn't found in the `GradeBook.GradeBooks` namespace.");
 
             // Get StandardGradeBook's first constructor (should be the only constructor)
             var constructor = gradebook.GetConstructors().FirstOrDefault();
