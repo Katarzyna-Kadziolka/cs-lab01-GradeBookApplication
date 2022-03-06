@@ -14,7 +14,7 @@ namespace GradeBook.GradeBooks {
 				throw new InvalidOperationException();
 			}
 			var sortStudents = Students.OrderByDescending(a => a.AverageGrade).ToList();
-			var averageGradePosition = sortStudents.FindIndex(a => a.AverageGrade < averageGrade);
+			var averageGradePosition = sortStudents.FindIndex(a => a.AverageGrade <= averageGrade);
 			double percentGradePosition = ((averageGradePosition + 1) * 100) / studentsNumber;
 			if (percentGradePosition <= 20) return'A';
 			if (percentGradePosition <= 40) return'B';
